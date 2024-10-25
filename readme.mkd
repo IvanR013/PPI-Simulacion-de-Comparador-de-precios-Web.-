@@ -1,0 +1,34 @@
+# P.P.I. - Proyecto de Muestra para la Presentación Final
+
+# Alumnos del grupo 4:
+
+    - Iván Rodriguez
+    - Ulises Cortés
+    - Federico Estevez
+    
+
+## Descripción
+
+Este proyecto es una demostración web de cómo funcionaría una página que compara precios de diferentes tiendas para distintos bienes utilizando web scraping mediante IA en Python. 
+
+La simulación se realizó utilizando JavaScript, HTML y CSS (con precios y productos definidos). Esta demostración **NO HACE WEB SCRAPING REAL**, y se presenta de forma estática, basada en algunos de los requerimientos de usuario recabados en la encuesta enviada.
+
+El código es abierto para su utilización en proyectos reales como base.
+
+## Funcionalidades
+
+  - Comparación de precios de diferentes productos entre varias tiendas.
+  - Visualización de información relevante como:
+  - Nombre de la tienda
+  - Precio del producto
+  - Valoraciones de los productos
+  - Imágenes de los productos
+  - Tarjeta especial que resalta el producto con el precio más bajo.
+
+## Tecnologías Utilizadas
+
+- **HTML**: Para la estructura de la página.
+- **CSS**: Para el diseño y la presentación visual.
+- **JavaScript**: Para la lógica y la interactividad de la página.
+- **Python** (propuesto para el proyecto real): Para el web scraping (no implementado en esta demostración).
+
