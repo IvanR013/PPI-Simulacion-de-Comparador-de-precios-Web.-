@@ -1,4 +1,4 @@
-// Productos simulados (datos precargados)
+// Productos simulados con datos estáticos predefinidos (Los nombres de los arrays serían las búsquedas simuladas).
 
 const productosSimulados = {
 
@@ -15,15 +15,27 @@ const productosSimulados = {
         { tienda: "BestBuy", precio: 120000 ,valoracion: 5, imagen: "Assets/bestuy.webp", link: "https://www.bestbuy.com/site/asus-14-fhd-laptop-intel-celeron-n4500-with-4gb-memory-64gb-emmc-star-black/6568803.p?skuId=6568803" },
         { tienda: "eBay", precio:476000 ,valoracion: 3, imagen: "Assets/ebaylaptop.webp", link: "https://www.ebay.com/itm/335333304416?var=544912129470" },
         { tienda: "MercadoLibre", precio: 348999,valoracion: 2, imagen: "Assets/lapMELI.webp", link: "https://www.mercadolibre.com.ar/notebook-lenovo-ideapad-1-4gb-128gb-14-intel-celeron-w11-color-plateado/p/MLA29590978?pdp_filters=item_id:MLA1852373098#is_advertising=true&searchVariation=MLA29590978&position=1&search_layout=stack&type=pad&tracking_id=ef01cced-7e35-4fc1-bcaa-e766338b0f90&is_advertising=true&ad_domain=VQCATCORE_LST&ad_position=1&ad_click_id=YWQwYTk0MTQtOGIyMi00YTAyLThiMDYtYjI4ZDgxNzlmYjky" }
+    ],
+
+    "PlayStation 5":[
+        { tienda: "Amazon", precio: 542000, valoracion: 1,imagen: "Assets/ps5_amazon.jpg",link: "https://www.amazon.com/-/es/PlayStation%C2%AE5-console-slim-SPORTS-College-Football/dp/B0D9JLP9N8/ref=sr_1_1?__mk_es_US=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1W4NXZWR4TH6T&dib=eyJ2IjoiMSJ9.8d7qTXJ3Plr94uTfOIz-FfK_yKomwtymNChct9W-q3nifAV11wUq4ZFNKX8IEMynZnnC-ykCacZIl2rdXlym7_4Vn0B6CarPJrNLo3tOX2Q79FlMqQZAyGrGhG6RRvO7YfSBfL_CfWwIhaLbOrcrd6TNx_ekVvkZIdoDmCWq7DwAWfmOEV4CCEc-bZriflltgwWQ9rA4ki33kgWWM0PmDjHcOrBia48ZslrM0PbnrC8.vGi-xgmLeZWQiR3B2paBPBX3Ep5o0wVTCqeCkOoT-M4&dib_tag=se&keywords=PlayStation+5&qid=1729891220&sprefix=playstation+5%2Caps%2C441&sr=8-1" },
+        { tienda: "BestBuy", precio: 450000 ,valoracion: 5, imagen: "Assets/ps5_bb.webp", link: "https://www.bestbuy.com/site/sony-playstation-5-slim-console-digital-edition-white/6566040.p?skuId=6566040" },
+        { tienda: "eBay", precio: 143000 ,valoracion: 3, imagen: "Assets/ps5_bb.webp", link: "https://www.ebay.com/itm/335620589902?_skw=playstation5&itmmeta=01JB2RZWA53XXM2HJAZ3QH3G93&hash=item4e248bc94e:g:3x0AAOSwegdnDntT&itmprp=enc%3AAQAJAAAA8HoV3kP08IDx%2BKZ9MfhVJKmGr3dLIFaoAkm5m1KCY2Q1hfl2sEktzh%2FDu7MqEFWwWn51%2BlSXpUxZY2QJMeBva7ahtQtNK6Jehon3vv8RsZM87r3ARzrGC1E6EDvGoZ%2BmM3n9QkUdDmb0At64W6QTE1RHrB6%2B32iL9g1tJtNuFBH1W0xn8JT%2FSWT1FrC9XkvxCRYOoz3xmmMwSka1NCndamqY6rhdg6mOOcQQN5goEHSUdbhU7DTTeY6BstjN1bw79dNqgeN7DM7tTmsZMLmrVMidXc1%2FiI3zqrCKRyWEw%2BcYlkNcEwcVxuaUSvo3kKz0%2FA%3D%3D%7Ctkp%3ABk9SR5TF_9jYZA" },
+        { tienda: "MercadoLibre", precio: 1650000,valoracion: 2, imagen: "Assets/ps5_meli.webp", link: "https://www.mercadolibre.com.ar/sony-playstation-5-slim-1tb-extra-dualsense-controller-color-blanco-2023/p/MLA29725752#polycard_client=search-nordic&wid=MLA1433434665&sid=search&searchVariation=MLA29725752&position=16&search_layout=stack&type=product&tracking_id=90e2caef-c8c3-4c2e-b6f7-1bb173899d9b" }
+    ],
+
+    "Tv QLED 4K":[
+        { tienda: "Amazon", precio: 447000, valoracion: 1,imagen: "Assets/tv_amazon.webp",link: "https://www.amazon.com/-/es/pulgadas-seguimiento-acelerador-movimiento-incorporado/dp/B0CVRZKW9M/ref=sr_1_1?__mk_es_US=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3D04OTMTVGIUJ&dib=eyJ2IjoiMSJ9.2NrbNoMZNYbpC9nXsCRmH-LAB2f_VbYixEfE3LxIsLEBTPa30H17cQD9dSB2U4SxRZfvwZCRhCSxqRmaVj1m7fHEApFITLb6b_EVTXPKxfFeGT-uutWbX9ZC7quDfC8F9PZhFBTYz6zwox12tWsTLhfH1cz9O965pHeLM5ORa9ZdKeTzQXxC2sWYA3XvOAZFNGRUPp0u4MXhXjQ80KcYGMNXSZkm0dcOFWOhNUfcwg8.5j_ON7pre5eHhom09_F0fOoicNfGU9nL0gKIFMkCt6U&dib_tag=se&keywords=Samsung%2BQLED%2B4K&qid=1729891605&sprefix=playstation%2B5%2Caps%2C633&sr=8-1&th=1" },
+        { tienda: "BestBuy", precio: 1500000 ,valoracion: 5, imagen: "Assets/tv_bb.webp", link: "https://www.bestbuy.com/site/samsung-55-class-ls03d-the-frame-series-qled-4k-with-anti-reflection-and-slim-fit-wall-mount-included-2024/6576585.p?skuId=6576585" },
+        { tienda: "eBay", precio: 1230000 ,valoracion: 3, imagen: "Assets/tv_ebay.webp", link: "https://www.ebay.com/itm/226311009665?_skw=Samsung+QLED+4K&itmmeta=01JB2S5WJ7CZ8MJZ0HQK79HDBG&hash=item34b12ff581:g:H0IAAOSwzvxmyU70&itmprp=enc%3AAQAJAAAA0HoV3kP08IDx%2BKZ9MfhVJKnMQ1JF%2Buz2Gu6S6mojqiM5fv2IDShoE4Z3Rn7ji0BLdKZA7nnFJa5%2BoTicjYdWs%2BDFNwZnT0S7t4u%2BgUb0r4nIwViNghqPrV0314XSPbPWTNPsD67SstiTupDCPd5uJSu%2BQ6tZ4EJDF9%2FBdyX8tVox5JQK%2FPBxY9iIfbuv4g8iNZxAkqfHA1f3dD94qciYwUqzzQhwVXYR37PAduFWgDayd1UyrqxSJOEaXj0HQOcCZQyP36pZz7DFBttYcV4woRw%3D%7Ctkp%3ABk9SR5jJl9nYZA" },
+        { tienda: "MercadoLibre", precio: 2250000,valoracion: 2, imagen: "Assets/tv_meli.webp", link: "https://www.mercadolibre.com.ar/smart-tv-samsung-gaming-50-neo-qled-4k-qn90c/p/MLA28619210#polycard_client=search-nordic&wid=MLA1592108396&sid=search&searchVariation=MLA28619210&position=3&search_layout=stack&type=product&tracking_id=aa8fe5f6-6087-45e0-b6f3-b1ff480f59b1" }
     ]
-
-
 
 };
 
 
 
-// Función para simular la búsqueda de productos
+// Función para simular el Web-Scrapping de productos
 
 function simularBusqueda() {
     
@@ -33,7 +45,8 @@ function simularBusqueda() {
 
     if (productoBuscado in productosSimulados) {
         
-        // Inicializar variables para el precio más bajo
+        // Éstas variables guardan la info de los productos con precio más bajo
+
         let precioMasBajo = productosSimulados[productoBuscado][0].precio;
         let tiendaMasBarata = productosSimulados[productoBuscado][0].tienda;
         let imagenProducto = productosSimulados[productoBuscado][0].imagen;
@@ -41,6 +54,7 @@ function simularBusqueda() {
         let valoracionMasAlta = productosSimulados[productoBuscado][0].valoracion;
 
         // Primer bucle: Encontrar el producto con el precio más bajo
+       
         productosSimulados[productoBuscado].forEach(producto => {
            
             if (producto.precio <= precioMasBajo) {
@@ -53,7 +67,7 @@ function simularBusqueda() {
             }
         });
 
-        // Segundo bucle: Crear tarjetas normales, excluyendo el producto con el precio más bajo
+        // Segundo bucle: Crear tarjetas normales, sacando el producto con el precio más bajo
    
         productosSimulados[productoBuscado].forEach(producto => {
    
@@ -84,7 +98,7 @@ function simularBusqueda() {
             }
         });
 
-        // Crear tarjeta para el producto de precio más bajo
+        // Se crea la tarjeta para el producto con precio más bajo
    
         const tarjetaPrecioBajo = document.createElement('div');
    
@@ -111,21 +125,22 @@ function simularBusqueda() {
 
 
 // Función para generar estrellas en base a la valoración
+
 function generarEstrellas(valoracion) {
    
     let estrellas = '';
    
-    for (let star = 0; star < 5; star++) { // Asumiendo una valoración de 5 estrellas
+    for (let star = 0; star < 5; star++) { // Asumiendo una valoración máxima de 5 estrellas
    
         if (star < valoracion) {
    
-            estrellas += '★'; // Estrella llena
+            estrellas += '★';
    
         } else {
    
-            estrellas += '☆'; // Estrella vacía
+            estrellas += '☆'; 
         }
     }
    
-    return estrellas; // Devuelve las estrellas generadas
+    return estrellas; // Como las estrellas son un str, las tengo que devolver para que se muestren en el HTML.
 }

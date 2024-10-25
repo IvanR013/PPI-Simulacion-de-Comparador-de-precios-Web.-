@@ -1,3 +1,4 @@
+/* Estilado por etiqueta o clase de div */
 body {
     font-family: Arial, sans-serif;
     background-color: #090909;
@@ -82,7 +83,7 @@ button:hover {
 }
 
 .cardLowPrice {
-    /* duplica los estilos de .card */
+    
     
     align-items: center;
 
@@ -92,18 +93,20 @@ button:hover {
     
     background-color: #f9f9f9;
     
-    /* agrega aquí los estilos personalizados */
     
-    background-color: #e0ffe0;  /* Ejemplo */
+    background-color: #e0ffe0;  
     
-    border-color: #4caf50;      /* Ejemplo */
+    border-color: #4caf50;    
 }
 
 
 .Search form {
     font-family: 'Roboto', sans-serif;
+
     display: flex;
-    align-items: center; /* Centra verticalmente */
-    gap: 10px; /* Espacio entre el label y el input */
+    
+    align-items: center; 
+    
+    gap: 10px; 
 }
 

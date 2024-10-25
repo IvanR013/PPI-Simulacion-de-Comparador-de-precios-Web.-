@@ -15,6 +15,13 @@ La simulación se realizó utilizando JavaScript, HTML y CSS (con precios y prod
 
 El código es abierto para su utilización en proyectos reales como base.
 
+## Búsquedas implementadas en la simulación:
+
+- Laptop
+- Iphone
+- PlayStation 5
+- Samsung QLED 4K
+
 ## Funcionalidades
 
   - Comparación de precios de diferentes productos entre varias tiendas.
@@ -24,11 +31,12 @@ El código es abierto para su utilización en proyectos reales como base.
   - Valoraciones de los productos
   - Imágenes de los productos
   - Tarjeta especial que resalta el producto con el precio más bajo.
+  - Vinculación a sitios web que continenen los productos mostrados (puede fallar por obvias razones).
 
 ## Tecnologías Utilizadas
 
 - **HTML**: Para la estructura de la página.
 - **CSS**: Para el diseño y la presentación visual.
 - **JavaScript**: Para la lógica y la interactividad de la página.
-- **Python** (propuesto para el proyecto real): Para el web scraping (no implementado en esta demostración).
+- **Python** (propuesto para el proyecto real): Para el web scraping con liberías de IA (no implementado en esta demostración).
 
