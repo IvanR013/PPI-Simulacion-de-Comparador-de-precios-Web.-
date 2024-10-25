@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulación Web Scraping de Precios</title>
+    <link rel="icon" type="image/png" href="Assets/shopping-store.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>ComparaME - Muestra Estática</h1>
+
+        <div class="Search">
+            
+            <form id="buscador-form">
+                <label for="producto">Buscar producto:</label>
+                <input type="text" id="producto" name="producto" placeholder="Ingrese un producto" required>
+                <button type="button" onclick="simularBusqueda()">Buscar</button>
+            </form>
+        
+        </div>
+        
+        <div id="resultados" class="resultados">
+
+            <!-- Los resultados se mostrarán aquí -->
+        
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
