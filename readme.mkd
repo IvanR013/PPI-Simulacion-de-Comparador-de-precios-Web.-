@@ -31,7 +31,7 @@ El código es abierto para su utilización en proyectos reales como base.
   - Valoraciones de los productos
   - Imágenes de los productos
   - Tarjeta especial que resalta el producto con el precio más bajo.
-  - Vinculación a sitios web que continenen los productos mostrados (puede fallar por obvias razones).
+  - Vinculación a los sitios web que contienen los productos mostrados (puede fallar por obvias razones).
 
 ## Tecnologías Utilizadas
 
