@@ -1,9 +1,26 @@
 /* Estilado por etiqueta o clase de div */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: #090909;
     padding: 20px;
+    position: relative;
 }
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('Assets/wallpaper.jpg'); 
+    background-size: cover;
+    background-position: center;
+    filter: blur(3px);
+    z-index: -1;
+    pointer-events: none; /* Permite el scroll sin bloquearlo */
+}
+
 
 .container {
     max-width: 800px;
@@ -15,6 +32,12 @@ body {
 }
 
 h1 {
+    text-align: center;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+}
+
+h2{
     text-align: center;
     color: #333;
     font-family: 'Roboto', sans-serif;
@@ -80,6 +103,12 @@ button:hover {
     
     font-size: 20px;
     color: #28a745;
+    
+}
+
+.agregados{
+
+    color: #ba6205;
 }
 
 .cardLowPrice {
@@ -89,7 +118,7 @@ button:hover {
 
     border: 1px solid #ccc;
     
-    padding: 10px;
+    padding: 5px;
     
     background-color: #f9f9f9;
     
