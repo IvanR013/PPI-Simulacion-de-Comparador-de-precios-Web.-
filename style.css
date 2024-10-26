@@ -1,4 +1,3 @@
-/* Estilado por etiqueta o clase de div */
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #090909;
@@ -21,23 +20,16 @@ body::before {
     pointer-events: none; /* Permite el scroll sin bloquearlo */
 }
 
-
 .container {
     max-width: 800px;
     margin: 0 auto;
     background-color: #ef9f0a;
-    padding: 20px;
+    padding: 40px;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-    text-align: center;
-    color: #333;
-    font-family: 'Roboto', sans-serif;
-}
-
-h2{
+h1, h2 {
     text-align: center;
     color: #333;
     font-family: 'Roboto', sans-serif;
@@ -59,7 +51,7 @@ input {
 button {
     padding: 10px 20px;
     background-color: #28a745;
-    color: rgb(255, 255, 255);
+    color: #fff; /* Cambiado a blanco para mayor contraste */
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -75,6 +67,7 @@ button:hover {
     gap: 15px;
 }
 
+/* Estilo para las tarjetas */
 .card {
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -82,6 +75,13 @@ button:hover {
     padding: 15px;
     text-align: center;
     background-color: #f9f9f9;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    transition: transform 0.2s, box-shadow 0.2s; /* Efecto de transición */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Eleva la tarjeta ligeramente al pasar el ratón */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más profunda al pasar el ratón */
 }
 
 .card img {
@@ -100,42 +100,36 @@ button:hover {
 }
 
 .card .price {
-    
     font-size: 20px;
     color: #28a745;
-    
 }
 
-.agregados{
-
+.agregados {
     color: #ba6205;
 }
 
 .cardLowPrice {
-    
-    
     align-items: center;
-
     border: 1px solid #ccc;
-    
     padding: 5px;
-    
-    background-color: #f9f9f9;
-    
-    
     background-color: #e0ffe0;  
-    
     border-color: #4caf50;    
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    transition: transform 0.2s, box-shadow 0.2s; /* Añadir transición para suavidad */
+}
+
+/* Efecto de hover */
+.cardLowPrice:hover {
+    transform: translateY(-7px); /* Elevar la tarjeta al pasar el ratón */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más profunda al pasar el ratón */
 }
 
 
+/* Estilo del formulario de búsqueda */
 .Search form {
     font-family: 'Roboto', sans-serif;
-
     display: flex;
-    
     align-items: center; 
-    
     gap: 10px; 
 }
 
