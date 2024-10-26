@@ -7,7 +7,9 @@ const productosSimulados = {
     "iPhone": [
         { tienda: "Amazon", precio: 780000,valoracion: 3, imagen: "Assets/iphoneAmazon.webp", link: "https://www.amazon.com/-/es/Boost-Mobile-Apple-iPhone-128/dp/B0DGLXYYFJ/ref=sr_1_7?__mk_es_US=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2TD2GLGZGKY8M&dib=eyJ2IjoiMSJ9.oAeWtL_ZPqk9jkYVCT3c4Za5k3u41MhsL6HsX3YQJGDEywOeZPE6YguBepr87izxHFmDAdocPPIhUpikAnorZr-PiHuR_40O3k-sb-8txiyNVfkHXwYCtW72KcNCRNJ1KaoBF5_MtlwWe9T5EEzw_6XH3WJewFCfn6SrdNnNM4SlPJnX9yYw13B9ZPbs91nyYh_djTYexAAijPDMpaUFUsM5yy1P5cpPl_wOmemKCqQ.lMrAfDBEMiM0hhFYx_PD1E0sTDiADvdICpmd6IpwHv8&dib_tag=se&keywords=iphone+15+pro+max&qid=1729887053&sprefix=iphone15+pro+max%2Caps%2C279&sr=8-7" },
         { tienda: "eBay", precio: 795000,valoracion: 2, imagen: "Assets/iphone_eBay.jpg",cuotas: true ,link: "https://www.ebay.com/itm/276217995756?_skw=iphone+15+pro+max&epid=3062772406&itmmeta=01JB2MDGCQZRRJ5S0MNSDGCTE4&hash=item404fe021ec%3Ag%3A%7EhYAAOSwiMJlc1PB&itmprp=enc%3AAQAJAAAA8HoV3kP08IDx%2BKZ9MfhVJKnJr1p6Lr1Sl5GHUMag4s%2Fy%2BkskNzR9iBEpAtNxz5uGWC6kPtCyyh6c%2FciJ6lDyEdOBqb5uNbtY%2FTl7J2KZlhwYFgLdt5w98X8wBwrB85W77VS23OqpVXFHZlfElcqo%2FYKYCBanh7%2FUgrLUVj4pGCyryrgS3%2BVdPKINluzOa9cus2biYx662XAEhzWsY1nxd%2BHLqKq7suAsGgDmEEB3CEKknWZVdTAIxc0SyY7BTGv%2FkgcpgWVX56HmhfVDuHfYb1E0xLhJlEzEwuxB9pvGKJpAUB%2FYdDsnGSg1EUTBmfw7Wg%3D%3D%7Ctkp%3ABk9SR7qGttTYZA&var=578596161787" },
-        { tienda: "MercadoLibre", precio: 2707000,valoracion: 5, imagen: "Assets/IphoneMELI.webp",cuotas: true ,link: "https://www.mercadolibre.com.ar/apple-iphone-15-pro-max-256-gb-titanio-blanco/p/MLA27172715#polycard_client=search-nordic&wid=MLA1937791480&sid=search&searchVariation=MLA27172715&position=1&search_layout=stack&type=product&tracking_id=c582f753-941d-4281-9bb3-617ebf6455f7" }
+        { tienda: "MercadoLibre", precio: 2707000,valoracion: 5, imagen: "Assets/IphoneMELI.webp",cuotas: true ,link: "https://www.mercadolibre.com.ar/apple-iphone-15-pro-max-256-gb-titanio-blanco/p/MLA27172715#polycard_client=search-nordic&wid=MLA1937791480&sid=search&searchVariation=MLA27172715&position=1&search_layout=stack&type=product&tracking_id=c582f753-941d-4281-9bb3-617ebf6455f7" },
+        { tienda: "Style Store", precio: 4400000,valoracion: 4, imagen: "Assets/stylestore_iphone.webp",cuotas: true,enviog: true ,link: "https://www.stylestore.com.ar/celular-apple-mu7a3bea/p?idsku=26231&gclsrc=aw.ds&gad_source=1&gclid=Cj0KCQjwpvK4BhDUARIsADHt9sTeeyoUcROEEfSGnK8MY1gOhpBCc1CNBflIZjI9INjCn7YADGUT7MQaAqv2EALw_wcB" },
+        { tienda: "Fravega", precio: 5000000,valoracion: 5, imagen: "Assets/iphone_frav.webp",cuotas: true,enviog: true ,link: "https://www.fravega.com/p/iphone-16-pro-max-256gb-21621195/?utm_source=google&utm_medium=cpc&utm_campaign=Conversion_Prosp_GG-PMax_Catalogo_Celulares_AO&utm_term=&utm_content=&gad_source=1&gclid=Cj0KCQjwpvK4BhDUARIsADHt9sRvp5dgtLYiy3LFbtNV3XRm6gswRy0Dj4_lD-nb-CMhNbn_VdHOEM8aArLpEALw_wcB&gclsrc=aw.ds" }
     ],
 
 
@@ -33,6 +35,7 @@ const productosSimulados = {
     ]
 
 };
+
 
 
     /**La funcion recupera en primer lugar los elementos del HTML productoBuscado y resultadosDiv
