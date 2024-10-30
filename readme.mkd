@@ -11,7 +11,7 @@
 
 Este proyecto es una demostración web de cómo funcionaría una página llamada "ComparaME" que compara precios de diferentes tiendas para distintos bienes utilizando web scraping mediante IA en Python. 
 
-La simulación se realizó utilizando JavaScript, HTML y CSS (con precios y productos definidos). Esta demostración **NO HACE WEB SCRAPING REAL**, y se presenta de forma estática, basada en algunos de los requerimientos de usuario recabados en la encuesta enviada.
+La simulación se realizó utilizando JavaScript, HTML y CSS (con precios y productos definidos). Esta demostración **NO HACE WEB SCRAPING REAL**, y se presenta de forma estática, basada en algunos de los requerimientos de usuario recavados en la encuesta enviada.
 
 El código es abierto para su utilización en proyectos reales como base.
 
