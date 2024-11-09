@@ -1,11 +1,13 @@
 // Productos simulados con datos estáticos predefinidos (Los nombres de los arrays serían las búsquedas simuladas).
-//NO SE PUEDEN REALIZAR BÚSQUEDAS POR FUEA DE LAS PREDEFINIDAS
+//NO SE PUEDEN REALIZAR BÚSQUEDAS POR FUERA DE LAS PREDEFINIDAS
+
+
 
 const productosSimulados = {
 
    
     "iPhone": [
-        { tienda: "Amazon", precio: 780000,valoracion: 3, imagen: "Assets/iphoneAmazon.webp", link: "https://www.amazon.com/-/es/Boost-Mobile-Apple-iPhone-128/dp/B0DGLXYYFJ/ref=sr_1_7?__mk_es_US=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2TD2GLGZGKY8M&dib=eyJ2IjoiMSJ9.oAeWtL_ZPqk9jkYVCT3c4Za5k3u41MhsL6HsX3YQJGDEywOeZPE6YguBepr87izxHFmDAdocPPIhUpikAnorZr-PiHuR_40O3k-sb-8txiyNVfkHXwYCtW72KcNCRNJ1KaoBF5_MtlwWe9T5EEzw_6XH3WJewFCfn6SrdNnNM4SlPJnX9yYw13B9ZPbs91nyYh_djTYexAAijPDMpaUFUsM5yy1P5cpPl_wOmemKCqQ.lMrAfDBEMiM0hhFYx_PD1E0sTDiADvdICpmd6IpwHv8&dib_tag=se&keywords=iphone+15+pro+max&qid=1729887053&sprefix=iphone15+pro+max%2Caps%2C279&sr=8-7" },
+        { tienda: "Amazon", precio: 780000,valoracion: 4, imagen: "Assets/iphoneAmazon.webp", link: "https://www.amazon.com/-/es/Boost-Mobile-Apple-iPhone-128/dp/B0DGLXYYFJ/ref=sr_1_7?__mk_es_US=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2TD2GLGZGKY8M&dib=eyJ2IjoiMSJ9.oAeWtL_ZPqk9jkYVCT3c4Za5k3u41MhsL6HsX3YQJGDEywOeZPE6YguBepr87izxHFmDAdocPPIhUpikAnorZr-PiHuR_40O3k-sb-8txiyNVfkHXwYCtW72KcNCRNJ1KaoBF5_MtlwWe9T5EEzw_6XH3WJewFCfn6SrdNnNM4SlPJnX9yYw13B9ZPbs91nyYh_djTYexAAijPDMpaUFUsM5yy1P5cpPl_wOmemKCqQ.lMrAfDBEMiM0hhFYx_PD1E0sTDiADvdICpmd6IpwHv8&dib_tag=se&keywords=iphone+15+pro+max&qid=1729887053&sprefix=iphone15+pro+max%2Caps%2C279&sr=8-7" },
         { tienda: "eBay", precio: 795000,valoracion: 2, imagen: "Assets/iphone_eBay.jpg",cuotas: true ,link: "https://www.ebay.com/itm/276217995756?_skw=iphone+15+pro+max&epid=3062772406&itmmeta=01JB2MDGCQZRRJ5S0MNSDGCTE4&hash=item404fe021ec%3Ag%3A%7EhYAAOSwiMJlc1PB&itmprp=enc%3AAQAJAAAA8HoV3kP08IDx%2BKZ9MfhVJKnJr1p6Lr1Sl5GHUMag4s%2Fy%2BkskNzR9iBEpAtNxz5uGWC6kPtCyyh6c%2FciJ6lDyEdOBqb5uNbtY%2FTl7J2KZlhwYFgLdt5w98X8wBwrB85W77VS23OqpVXFHZlfElcqo%2FYKYCBanh7%2FUgrLUVj4pGCyryrgS3%2BVdPKINluzOa9cus2biYx662XAEhzWsY1nxd%2BHLqKq7suAsGgDmEEB3CEKknWZVdTAIxc0SyY7BTGv%2FkgcpgWVX56HmhfVDuHfYb1E0xLhJlEzEwuxB9pvGKJpAUB%2FYdDsnGSg1EUTBmfw7Wg%3D%3D%7Ctkp%3ABk9SR7qGttTYZA&var=578596161787" },
         { tienda: "MercadoLibre", precio: 2707000,valoracion: 5, imagen: "Assets/IphoneMELI.webp",cuotas: true ,link: "https://www.mercadolibre.com.ar/apple-iphone-15-pro-max-256-gb-titanio-blanco/p/MLA27172715#polycard_client=search-nordic&wid=MLA1937791480&sid=search&searchVariation=MLA27172715&position=1&search_layout=stack&type=product&tracking_id=c582f753-941d-4281-9bb3-617ebf6455f7" },
         { tienda: "Style Store", precio: 4400000,valoracion: 4, imagen: "Assets/stylestore_iphone.webp",cuotas: true,enviog: true ,link: "https://www.stylestore.com.ar/celular-apple-mu7a3bea/p?idsku=26231&gclsrc=aw.ds&gad_source=1&gclid=Cj0KCQjwpvK4BhDUARIsADHt9sTeeyoUcROEEfSGnK8MY1gOhpBCc1CNBflIZjI9INjCn7YADGUT7MQaAqv2EALw_wcB" },
@@ -48,6 +50,8 @@ const productosSimulados = {
      * Una vez hecho eso, se generan las tarjetas con los productos. 
      * 
      * Si el producto tiene el precio mas bajo, se le generará una tarjeta especial marcando esta diferencia.
+     * 
+     * Además Se añadió el botón favorito para clasificar un producto específico como tal.
        
     @returns {void}    
      */
@@ -56,8 +60,8 @@ const productosSimulados = {
 
 function simularBusqueda() {
 
-    const productoBuscado = document.getElementById('producto').value;
-    const resultadosDiv = document.getElementById('resultados');
+    const productoBuscado = document.getElementById('producto').value; //Obtenemos el valor que recibimos en la barra de búsqueda.
+    const resultadosDiv = document.getElementById('resultados'); //Acá van todas las tarjetas de los productos (varía el estilo según su class).
     resultadosDiv.innerHTML = ''; // Limpiar resultados anteriores
 
     if (productoBuscado in productosSimulados) {
@@ -90,13 +94,14 @@ function simularBusqueda() {
         
             if (!(producto.precio === precioMasBajo && producto.tienda === tiendaMasBarata)) {
         
-                const tarjetaProducto = document.createElement('div');
+                const tarjetaProducto = document.createElement('div'); //Creamos un div para las tarjetas de precios normales
         
-                tarjetaProducto.classList.add('card');
+                tarjetaProducto.classList.add('card'); //Le asignamos un class especifico para diferenciar su estilo del de precios bajos
         
                 tarjetaProducto.style.position = 'relative'; // Permite posicionar el botón favorito
         
-                tarjetaProducto.innerHTML = `
+                //Este es el HTML embebido que se crea cuando aparecen las tarjetas. Es el contenido de las mismas.
+                tarjetaProducto.innerHTML = ` 
         
                 <a href="${producto.link}" target="_blank">
         
@@ -117,9 +122,9 @@ function simularBusqueda() {
                     <div>${generarEstrellas(producto.valoracion)}</div>
                 `;
         
-                resultadosDiv.appendChild(tarjetaProducto);
+                resultadosDiv.appendChild(tarjetaProducto); // Añadimos el código embebido en el div general.
         
-                agregarBotonFavorito(tarjetaProducto); //Añadimos con appendchild el elemento creado del boton favorito.
+                agregarBotonFavorito(tarjetaProducto); //Añadimos el botón de favorito a la tarjeta de productos.
         
             }
         });
@@ -152,7 +157,7 @@ function simularBusqueda() {
         
             <div>${generarEstrellas(valoracionMasAlta)}</div>
         `;
-        resultadosDiv.appendChild(tarjetaPrecioBajo);
+        resultadosDiv.appendChild(tarjetaPrecioBajo); 
         
         agregarBotonFavorito(tarjetaPrecioBajo);  // Agregar el botón favorito al producto de precio más bajo
 
@@ -163,18 +168,30 @@ function simularBusqueda() {
 }
 
 // Función para agregar el botón de favorito a cada tarjeta
-
+/**
+ *  Lógica de la función del botón de favoritos:
+ * 
+ * En la funcion agregarBotonFavorito() se crea un elemento span en cada tarjeta de precio de manera independiente y no embebida (de forma que puedas elegir libremente qué productos son favoritos y cuáles no, como debería ser)
+ * A ese elemento span se le asigna una class para darle estilos personalizados, el emoji del corazón "vacío" 
+ * y la subfunción que maneja el evento del botón (lo que hace que el corazón se vuelva rojo al clickear).
+ * 
+ * 
+ * En cuanto a la función ToggleFavorite(), Se encarga de recibir el feedback de la funcion que maneja el evento del click y 
+ * la asigna al corazón vacío (`🤍`) al estado active por defecto para que, al clickearse; cambie su estado de active a "no active" 
+ * y con eso cambie del emoji vacío al corazón rojo (`❤️`).
+ * 
+ */
 function agregarBotonFavorito(tarjeta) {
 
     const favoriteBtn = document.createElement("span"); // Crea el span que contiene el emoji del corazón
 
     favoriteBtn.className = "favorite-btn"; // Se le asigna una clase para el CSS
 
-    favoriteBtn.innerText = "🤍"; //Se inserta el propio emoji.
+    favoriteBtn.innerText = "🤍"; //Se inserta el propio emoji del corazón vacío.
 
     favoriteBtn.onclick = function() { // función que maneja el evento de cambiar después de clickear el corazón.
 
-        toggleFavorite(favoriteBtn);
+        toggleFavorite(favoriteBtn); // Llamamos en este evento a la función que maneja los cambios segun los clicks
     };
 
     tarjeta.appendChild(favoriteBtn);  // Agregar al final de la tarjeta
@@ -193,9 +210,26 @@ function toggleFavorite(element) {
 
 // Función para generar estrellas en base a la valoración
 
+/**
+ * Función generarEstrellas():
+ * 
+ * Esta función recibe  como argumento un int del diccionario de búsquedas predefinidas.
+ * Con ese feedback, la función genera tantas estrellas llenas ("★") como grande sea el número del diccionario (siempre que sea <=5).
+ * El resto de espacios hasta llegar a 5 estrellas, lo ocupan las vacías, si las hay ("☆").
+ * 
+ * Entonces, si en el diccionario un iphone tiene como valoración 3, esta función toma ese parámetro, lo valida en el for y
+ * lo utiliza como límite para generar estrellas llenas. 
+ * 
+ * Si volvemos a nuestro ejemplo, el for recibe 3, tres es menor que cinco y en la segunda validación (if) si las estrellas a generar en cada iteración son 
+ * menores que el int de valoración (el 3) genera estrellas llenas. Como en las siguientes iteraciones star es mayor que valoración, se completará con estrellas vacías hasta alcanzar el total de 5. 
+ * 
+ * Esto nos permite generar un número de estrellas llenas igual a la valoración (3) y que los espacios restantes se completen con estrellas vacías (2), para abarcar una valoración del 1 al 5.
+ */
+
+
 function generarEstrellas(valoracion) {
    
-    let estrellas = '';
+    let estrellas = ''; //Las estrellas son str, entonces se genera el espacio para poder agregarlas.
    
     for (let star = 0; star < 5; star++) { // Asumiendo una valoración máxima de 5 estrellas
    
