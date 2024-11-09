@@ -133,3 +133,25 @@ button:hover {
     gap: 10px; 
 }
 
+.favorite-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: white;
+    color: red;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.favorite-btn:hover {
+    transform: scale(1.2);
+}
+
+.favorite-btn.active {
+    color: #ff4b5c;
+    background-color: #ffe6e6;
+}

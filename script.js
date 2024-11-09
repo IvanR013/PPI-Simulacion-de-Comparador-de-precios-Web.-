@@ -61,101 +61,135 @@ function simularBusqueda() {
     resultadosDiv.innerHTML = ''; // Limpiar resultados anteriores
 
     if (productoBuscado in productosSimulados) {
-        
-        // Éstas variables guardan la info de los productos con precio más bajo
 
+        // Variables para almacenar la información del producto de precio más bajo
         let precioMasBajo = productosSimulados[productoBuscado][0].precio;
         let tiendaMasBarata = productosSimulados[productoBuscado][0].tienda;
         let imagenProducto = productosSimulados[productoBuscado][0].imagen;
         let linkProducto = productosSimulados[productoBuscado][0].link;
         let valoracionMasAlta = productosSimulados[productoBuscado][0].valoracion;
+        let envioGratis = productosSimulados[productoBuscado][0].enviog;
+        let promoBancaria = productosSimulados[productoBuscado][0].cuotas;
 
-        // Primer bucle: Encontrar el producto con el precio más bajo
-       
+        // Primer bucle para encontrar el producto con el precio más bajo
         productosSimulados[productoBuscado].forEach(producto => {
-           
-            if (producto.precio <= precioMasBajo) {
-          
+            if (producto.precio < precioMasBajo) {
                 precioMasBajo = producto.precio;
                 tiendaMasBarata = producto.tienda;
                 imagenProducto = producto.imagen;
                 linkProducto = producto.link;
                 valoracionMasAlta = producto.valoracion;
-                envioGratis = producto.enviog
-                promoBancaria= producto.cuotas
+                envioGratis = producto.enviog;
+                promoBancaria = producto.cuotas;
             }
         });
 
-        // Segundo bucle: Crear tarjetas normales, sacando el producto con el precio más bajo
-   
+        // Segundo bucle para crear las tarjetas normales (excepto el de precio más bajo)
+        
         productosSimulados[productoBuscado].forEach(producto => {
-   
+        
             if (!(producto.precio === precioMasBajo && producto.tienda === tiendaMasBarata)) {
-            
-
-                const card = document.createElement('div');
-   
-                card.classList.add('card');
-   
-                card.innerHTML = `
-   
+        
+                const tarjetaProducto = document.createElement('div');
+        
+                tarjetaProducto.classList.add('card');
+        
+                tarjetaProducto.style.position = 'relative'; // Permite posicionar el botón favorito
+        
+                tarjetaProducto.innerHTML = `
+        
                 <a href="${producto.link}" target="_blank">
-   
-                <img src="${producto.imagen}" alt="${producto.tienda}">
-   
-                </a>
-   
-                <h3>${producto.tienda}</h3>
-   
-                <p class="price">$${producto.precio}</p>
-                
-                ${producto.enviog ? '<p class="agregados">Envío gratis</p>' : ''}
-
-                ${producto.cuotas ? '<p class="agregados">Hasta 12 cuotas sin interés</p>' : ''}
-
-                <p>Valoración: ${producto.valoracion} Estrellas</p>
-   
-                <div>${generarEstrellas(producto.valoracion)}</div>`;
-   
-                    resultadosDiv.appendChild(card);
-   
-            } 
+        
+                    <img src="${producto.imagen}" alt="${producto.tienda}">
+        
+                        </a>
+        
+                    <h3>${producto.tienda}</h3>
+        
+                    <p class="price">$${producto.precio}</p>
+        
+                    ${producto.enviog ? '<p class="agregados">Envío gratis</p>' : ''}
+        
+                    ${producto.cuotas ? '<p class="agregados">Hasta 12 cuotas sin interés</p>' : ''}
+        
+                    <p>Valoración: ${producto.valoracion} Estrellas</p>
+        
+                    <div>${generarEstrellas(producto.valoracion)}</div>
+                `;
+        
+                resultadosDiv.appendChild(tarjetaProducto);
+        
+                agregarBotonFavorito(tarjetaProducto); //Añadimos con appendchild el elemento creado del boton favorito.
+        
+            }
         });
 
-        // Se crea la tarjeta para el producto con precio más bajo
-   
+        // Crear la tarjeta para el producto con el precio más bajo
+        
         const tarjetaPrecioBajo = document.createElement('div');
-   
+        
         tarjetaPrecioBajo.classList.add('cardLowPrice');
-   
+        
+        tarjetaPrecioBajo.style.position = 'relative'; // Necesario para ubicar el botón favorito
+        
         tarjetaPrecioBajo.innerHTML = `
-   
+        
         <a href="${linkProducto}" target="_blank">
         
-                <img src="${imagenProducto}" alt="${tiendaMasBarata}">
-            </a>
-            
-            <h3>Precio más bajo: ${tiendaMasBarata}</h3>
-            
-            <p class="price">Precio: $${precioMasBajo}</p>
-            
-            ${envioGratis ? '<p class="agregados">Envío gratis</p>' : ''}
-
-            ${promoBancaria ? '<p class="agregados">Hasta 12 cuotas sin interés</p>' : ''}
-
-            <p>Valoración: ${valoracionMasAlta} Estrellas</p>
-            
-            <div>${generarEstrellas(valoracionMasAlta)}</div>`;
+            <img src="${imagenProducto}" alt="${tiendaMasBarata}">
         
+                </a>
+        
+            <h3>Precio más bajo: ${tiendaMasBarata}</h3>
+        
+            <p class="price">Precio: $${precioMasBajo}</p>
+        
+            ${envioGratis ? '<p class="agregados">Envío gratis</p>' : ''}
+        
+            ${promoBancaria ? '<p class="agregados">Hasta 12 cuotas sin interés</p>' : ''}
+        
+            <p>Valoración: ${valoracionMasAlta} Estrellas</p>
+        
+            <div>${generarEstrellas(valoracionMasAlta)}</div>
+        `;
         resultadosDiv.appendChild(tarjetaPrecioBajo);
-   
+        
+        agregarBotonFavorito(tarjetaPrecioBajo);  // Agregar el botón favorito al producto de precio más bajo
+
     } else {
-       
+        
         resultadosDiv.innerHTML = `<p>No se encontraron resultados para "${productoBuscado}".</p>`;
-   
     }
 }
 
+// Función para agregar el botón de favorito a cada tarjeta
+
+function agregarBotonFavorito(tarjeta) {
+
+    const favoriteBtn = document.createElement("span"); // Crea el span que contiene el emoji del corazón
+
+    favoriteBtn.className = "favorite-btn"; // Se le asigna una clase para el CSS
+
+    favoriteBtn.innerText = "🤍"; //Se inserta el propio emoji.
+
+    favoriteBtn.onclick = function() { // función que maneja el evento de cambiar después de clickear el corazón.
+
+        toggleFavorite(favoriteBtn);
+    };
+
+    tarjeta.appendChild(favoriteBtn);  // Agregar al final de la tarjeta
+}
+
+
+// Función para manejar el estado del botón de favoritos
+function toggleFavorite(element) {
+    
+    element.classList.toggle("active"); // Le asignamos por defecto el estado active.
+
+    // Cambia el emoji del corazón según si está activo o no
+
+    element.innerText = element.classList.contains("active") ? "❤️" : "🤍";
+}
 
 // Función para generar estrellas en base a la valoración
 
