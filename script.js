@@ -40,7 +40,9 @@ const productosSimulados = {
 
 
 
-    /**La funcion recupera en primer lugar los elementos del HTML productoBuscado y resultadosDiv
+    /**Función simularBusqueda():
+     * 
+     * La funcion recupera en primer lugar los elementos del HTML productoBuscado y resultadosDiv
      * 
      * productoBuscado es el valor de las búsquedas predefinidas, por ej, si yo ingreso alguna de las búsquedas predefinidas, se podrá relaizar la continuacion de la funcion. de lo contrario, la web nos devolvera un mensaje de error.
      * 
