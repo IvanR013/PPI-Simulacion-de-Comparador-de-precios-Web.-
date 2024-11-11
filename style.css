@@ -155,3 +155,35 @@ button:hover {
     color: #ff4b5c;
     background-color: #ffe6e6;
 }
+
+
+/* Estilos para el footer */
+
+footer {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ef9f0a;
+    color: #000000;
+    text-align: center;
+    padding: 10px;
+    font-size: 9px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Cambiado a 100% */
+    box-shadow: 0 -1px 5px rgba(71, 71, 71, 0.3);
+}
+
+.footer h2 {
+    margin: 0;
+    font-weight: 400;
+}
+
+
+/* Responsividad para dispositivos móviles */
+
+@media (max-width: 600px) {
+    .footer {
+        font-size: 0.8em;
+        padding: 15px;
+    }
+}
