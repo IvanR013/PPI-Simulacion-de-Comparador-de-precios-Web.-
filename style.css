@@ -35,6 +35,21 @@ h1, h2 {
     font-family: 'Roboto', sans-serif;
 }
 
+.title {
+    text-align: center;
+    color: #333;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em; /* Tamaño de fuente similar al h1 */
+    font-weight: bold; /* Peso de fuente similar al h1 */
+    margin: 60px 0; /* Espaciado similar al h1 */
+margin-left: 320px;
+}
+
+.title:hover {
+    color: #555; /* Cambia el color al pasar el cursor */
+}
+
 form {
     display: flex;
     justify-content: center;

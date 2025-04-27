@@ -1,11 +1,6 @@
 # P.P.I. - Proyecto de Muestra para la Presentación Final
 
-# Alumnos del grupo 4:
 
-    - Iván Rodriguez
-    - Ulises Cortés
-    - Federico Estevez
-    
 
 ## Descripción
 
